@@ -1,0 +1,14 @@
+---
+- name: This is my first playbook.
+  hosts: localhost
+  gather_facts: false
+  become: false
+
+  vars:
+    message: "Hello World!"
+
+  tasks:
+    - name: Display Message
+      debug:
+        msg: '{{ message }}'
+
